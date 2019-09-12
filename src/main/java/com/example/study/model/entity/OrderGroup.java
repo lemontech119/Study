@@ -1,20 +1,22 @@
 package com.example.study.model.entity;
 
+import jdk.internal.org.objectweb.asm.tree.LocalVariableAnnotationNode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
-import org.apache.tomcat.jni.Local;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity
-public class OrderDetail {
+public class OrderGroup {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +24,21 @@ public class OrderDetail {
 
     private String status;
 
-    private LocalDateTime arrivalDate;
+    private String orderType;
 
-    private Integer quantity;
+    private String revAddress;
+
+    private String revName;
+
+    private String paymentType;
 
     private BigDecimal totalPrice;
+
+    private Integer totalQuantity;
+
+    private LocalDateTime orderAt;
+
+    private LocalDateTime arrivalDate;
 
     private LocalDateTime createdAt;
 
@@ -35,13 +47,4 @@ public class OrderDetail {
     private LocalDateTime updatedAt;
 
     private String updatedBy;
-
-//    // N : 1
-//    @ManyToOne
-//    private User user; // user_id
-//
-//    // N : 1
-//    @ManyToOne
-//    private Item item; // item_id
-
 }
