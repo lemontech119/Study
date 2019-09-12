@@ -1,6 +1,5 @@
 package com.example.study.model.entity;
 
-import jdk.internal.org.objectweb.asm.tree.LocalVariableAnnotationNode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
