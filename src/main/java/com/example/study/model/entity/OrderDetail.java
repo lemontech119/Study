@@ -36,6 +36,10 @@ public class OrderDetail {
 
     private String updatedBy;
 
+    private Long itemId;
+
+    private Long orderGroupId;
+
 //    // N : 1
 //    @ManyToOne
 //    private User user; // user_id

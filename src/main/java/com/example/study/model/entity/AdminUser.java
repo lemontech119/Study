@@ -36,7 +36,7 @@ public class AdminUser {
 
     private LocalDateTime registeredAt;
 
-    private LocalDateTime unregisteredAy;
+    private LocalDateTime unregisteredAt;
 
     private LocalDateTime createdAt;
 
